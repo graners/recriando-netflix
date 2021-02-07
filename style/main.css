@@ -1,39 +1,65 @@
 :root {
-    --vermelho: #e50914;
-    --preta: #141414;
+  --vermelho: #e50914;
+  --preta: #141414;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/*Elementos-Base*/
 body {
-    background: var(--preta);
-    font-family: 'Times New Roman', Times, serif;
+  background: var(--preta);
+  font-family: "Times New Roman", Times, serif;
+  color: white;
 }
 
-.container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;  /*espaço entre os elementos da div*/
+header .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; /*espaço entre os elementos da div*/
 }
 
-.logo {
-    margin-left: 5px;
-    color: var(--vermelho);
-    font-family: 'Arial Black', Times;
-    font-size: 40px;
+header .logo {
+  margin-left: 5px;
+  color: var(--vermelho);
+  font-family: "Arial Black", Times;
+  font-size: 40px;
 }
 
 header nav a {
-    text-decoration: none;
-    color: #AAA;
-    margin-right: 10px;
+  text-decoration: none;
+  color: #aaa;
+  margin-right: 10px;
 }
 
 header nav a:hover {
-    color: #fff;
+  color: #fff;
+}
+
+/*Filme Principal*/
+
+.filme-principal {
+  font-size: 16px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%),
+    url("/img/dark.jpg"); /*gradiente pede mais de uma cor, por isso dois rgba*/
+
+  height: 400px;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column; /*justify-content sempre segue a orientação do flex direction*/
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.filme-principal .descricao {
+  margin-bottom: 40px;
+}
+
+.titulo {
+  font-size: 40px;
 }
